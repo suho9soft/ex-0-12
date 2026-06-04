@@ -1,8 +1,8 @@
 #include <WiFi.h>
 #include <ModbusTCP.h>
 
-const char* ssid = "KT_GiGA_403E";
-const char* password = "3cb39dz243";
+const char* ssid = "**********";
+const char* password = "**********";
 
 ModbusTCP mb;
 
