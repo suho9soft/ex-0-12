@@ -64,3 +64,5 @@ MT8102iP는 10.1인치 터치스크린을 갖춘 산업용 HMI로, ESP32와 Modb
 - Weintek MT8102iP HMI 화면에서 각 버튼을 개별적으로 표시 및 제어  
 - 버튼 수가 늘어나도 Modbus/TCP 통신 구조는 동일하게 유지  
 - 확장 시에는 HMI 프로젝트에서 버튼 UI를 추가하고, ESP32 코드에서 핀 매핑만 변경하면 됩니다
+- Raspberry pi 끄면 ESP32 반도체에 세팅값이 있어 WE!NTEK 작동 시킬수 있습니다 하지만 CODESYS Raspberry pi SL 돌리면 핸드폰에서 작동 합니다
+- 그러니까요 터치을 하고 싶으면 Raspberry pi 끄고요 핸드폰으로 하고 싶으면 Raspberry pi 켜 세요 꼭 성공 하길 바랍니다 ok 땡큐! 
