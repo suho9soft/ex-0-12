@@ -54,3 +54,45 @@ ESP32 + Weintek HMI → 기본 버튼 제어
 Raspberry Pi + CODESYS SL → 스마트폰 제어
 
 Node-RED → 중앙에서 데이터 흐름 관리 및 시각화
+
+핸드폰에서 IoT MQTT Panel 사용하기
+ESP32와 Weintek HMI를 제어할 때, 스마트폰 앱 IoT MQTT Panel을 활용하면 모바일에서도 버튼 제어와 상태 모니터링이 가능합니다.
+
+🔌 IoT MQTT Panel 개요
+안드로이드에서 많이 쓰이는 MQTT 클라이언트 앱
+
+MQTT Broker(예: Mosquitto, EMQX, HiveMQ)에 연결하여 ESP32와 데이터 송수신
+
+버튼, 스위치, 그래프, 텍스트 등 다양한 UI 위젯 제공
+
+스마트폰 화면에서 직접 장치 제어 및 상태 확인 가능
+
+⚙️ 설정 방법
+MQTT Broker 준비
+
+Raspberry Pi, PC, 또는 클라우드 서버에 Mosquitto 같은 MQTT Broker 설치
+
+ESP32가 이 Broker에 접속하도록 코드 작성
+
+IoT MQTT Panel 앱 설치
+
+구글 플레이스토어에서 IoT MQTT Panel 다운로드
+
+앱에서 Broker 연결 설정
+
+Broker 주소(IP), 포트(기본 1883), 사용자/비밀번호 입력
+
+연결 테스트 후 성공하면 장치와 통신 가능
+
+위젯 추가
+
+버튼 위젯 → ESP32로 제어 신호 전송 (topic: esp32/button1)
+
+텍스트/그래프 위젯 → ESP32 상태값 표시 (topic: esp32/status)
+
+📊 활용 예시
+HMI 버튼 제어와 동일하게 스마트폰에서 버튼을 누르면 ESP32 GPIO 제어
+
+상태 모니터링: ESP32가 센서값을 MQTT로 전송 → 스마트폰에서 실시간 확인
+
+멀티 제어: HMI, 스마트폰, Node-RED 대시보드 모두 같은 MQTT Broker를 통해 동작
