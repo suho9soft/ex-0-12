@@ -96,3 +96,61 @@ HMI 버튼 제어와 동일하게 스마트폰에서 버튼을 누르면 ESP32 G
 상태 모니터링: ESP32가 센서값을 MQTT로 전송 → 스마트폰에서 실시간 확인
 
 멀티 제어: HMI, 스마트폰, Node-RED 대시보드 모두 같은 MQTT Broker를 통해 동작
+스마트폰에서 Home Assistant 사용하기
+ESP32 + Weintek HMI 프로젝트를 확장하면, 스마트폰에서 Home Assistant 앱을 통해 제어할 수 있습니다.
+Home Assistant는 오픈소스 스마트 홈 플랫폼으로, MQTT와 같은 프로토콜을 지원하여 ESP32와 쉽게 연동됩니다.
+
+🔌 Home Assistant 개요
+오픈소스 스마트 홈 자동화 플랫폼
+
+안드로이드/iOS 앱 제공 → 스마트폰에서 직접 제어 가능
+
+MQTT, Modbus, HTTP, Zigbee, Z-Wave 등 다양한 프로토콜 지원
+
+대시보드(UI)를 커스터마이징하여 버튼, 스위치, 센서값 표시 가능
+
+⚙️ ESP32 + Home Assistant 연동 방법
+MQTT Broker 준비
+
+Raspberry Pi, PC, 또는 클라우드에 Mosquitto 설치
+
+ESP32가 MQTT Broker에 연결되도록 코드 작성
+
+Home Assistant 설치
+
+Raspberry Pi, Docker, 또는 서버에 Home Assistant 설치
+
+MQTT 통합(Add-on)을 활성화
+
+ESP32 토픽 등록
+
+예:
+
+esp32/button1 → 버튼 제어
+
+esp32/status → 상태 모니터링
+
+스마트폰 앱에서 제어
+
+Home Assistant 앱 실행 → 대시보드에서 버튼 UI 추가
+
+ESP32와 실시간으로 통신하여 제어 가능
+
+📊 활용 예시
+HMI 버튼 제어와 동일하게 스마트폰에서 버튼을 누르면 ESP32 GPIO 제어
+
+센서 모니터링: ESP32가 온도/습도 센서값을 MQTT로 전송 → Home Assistant 대시보드에서 확인
+
+자동화 시나리오:
+
+버튼 누르면 → LED 켜기
+
+특정 시간에 → 장치 자동 제어
+
+👉 정리하면:
+
+Weintek HMI → 현장 터치 제어
+
+IoT MQTT Panel → 간단한 모바일 MQTT 제어
+
+Home Assistant → 스마트폰 앱 기반의 스마트 홈 통합 제어
