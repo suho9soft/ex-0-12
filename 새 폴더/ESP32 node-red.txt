@@ -2472,6 +2472,92 @@
         ]
     },
     {
+        "id": "c25a59b90cb5b43c",
+        "type": "mqtt in",
+        "z": "de839b2257d857b6",
+        "name": "",
+        "topic": "sonoff8_zg123",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "2e417f87180bbf16",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 720,
+        "y": 4000,
+        "wires": [
+            [
+                "5384a5e782f80018"
+            ]
+        ]
+    },
+    {
+        "id": "d291c4bae4d82367",
+        "type": "mqtt out",
+        "z": "de839b2257d857b6",
+        "name": "",
+        "topic": "sonoff8_zg123",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "2e417f87180bbf16",
+        "x": 880,
+        "y": 3920,
+        "wires": []
+    },
+    {
+        "id": "bbed6a1f5b25b75a",
+        "type": "ui_text_input",
+        "z": "de839b2257d857b6",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "a8f5bc113a72b029",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 700,
+        "y": 3920,
+        "wires": [
+            [
+                "d291c4bae4d82367"
+            ]
+        ]
+    },
+    {
+        "id": "5384a5e782f80018",
+        "type": "ui_text",
+        "z": "de839b2257d857b6",
+        "group": "a8f5bc113a72b029",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 930,
+        "y": 4000,
+        "wires": []
+    },
+    {
         "id": "2e417f87180bbf16",
         "type": "mqtt-broker",
         "name": "broker",
@@ -2598,7 +2684,7 @@
         "stateLogEnabled": false,
         "queueLogEnabled": false,
         "failureLogEnabled": true,
-        "tcpHost": "172.30.1.48",
+        "tcpHost": "172.30.1.51",
         "tcpPort": 502,
         "tcpType": "DEFAULT",
         "serialPort": "/dev/ttyUSB",
@@ -2628,7 +2714,7 @@
         "stateLogEnabled": false,
         "queueLogEnabled": false,
         "failureLogEnabled": true,
-        "tcpHost": "172.30.1.61",
+        "tcpHost": "172.30.1.50",
         "tcpPort": "502",
         "tcpType": "DEFAULT",
         "serialPort": "/dev/ttyS0",
@@ -2650,6 +2736,15 @@
         "showLogs": true
     },
     {
+        "id": "a8f5bc113a72b029",
+        "type": "ui_group",
+        "name": "Group 9",
+        "tab": "be96efde1107f7d0",
+        "order": 9,
+        "disp": true,
+        "width": 6
+    },
+    {
         "id": "be96efde1107f7d0",
         "type": "ui_tab",
         "name": "Tab 1",
@@ -2659,7 +2754,7 @@
         "hidden": false
     },
     {
-        "id": "cdb3782a92c47941",
+        "id": "26675ba91ace29a2",
         "type": "global-config",
         "env": [],
         "modules": {
