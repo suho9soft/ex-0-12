@@ -21,7 +21,19 @@ Port: 502
 
 기능
 
-Coil(00001~00008) → GPIO2~GPIO9 출력 제어
+  디바이스 MODBUS TCP/IP 주소 4x 1
+  
+  디바이스 MODBUS TCP/IP 주소0x 00001 속성 토글
+
+  디바이스 MODBUS TCP/IP 주소0x 00001
+
+  디바이스 MODBUS TCP/IP_1 주소 4x 1
+  
+  디바이스 MODBUS TCP/IP_1 주소0x 00001 속성 토글
+
+  디바이스 MODBUS TCP/IP_1 주소0x 00001
+ 
+ Coil(00001~00008) → GPIO2~GPIO9 출력 제어
 
 Hreg(40001~40009) → 출력 상태 및 타이머 피드백
 
