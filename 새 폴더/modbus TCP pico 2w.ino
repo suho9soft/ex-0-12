@@ -2,8 +2,8 @@
 #include <ModbusTCP.h>   // modbus-pico 라이브러리
 
 // WiFi 설정
-const char* ssid = "KT_GiGA_403E";
-const char* password = "3cb39dz243";
+const char* ssid = "**********";
+const char* password = "**********";
 
 ModbusTCP mb;
 
