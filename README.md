@@ -1,7 +1,7 @@
 📌 ESP32 / Pico 2W + Weintek HMI + CODESYS + Node-RED 프로젝트
 🖥️ 프로젝트 개요
 이 프로젝트는 PLC(CODESYS SL, Raspberry Pi)를 출발점으로 하여,
-ESP32 / Pico 2 W / Weintek HMI / Node-RED / MQTT / Home Assistant를 확장 모듈로 연동하는 현장 중심 제어 시스템입니다.
+ESP32 / Pico 2W / Weintek HMI / Node-RED / MQTT / Home Assistant를 확장 모듈로 연동하는 현장 중심 제어 시스템입니다.
 
 1️⃣ CODESYS SL (Raspberry Pi → PLC 역할)
 출발점: 라즈베리파이에 CODESYS SL 설치 → PLC처럼 동작
