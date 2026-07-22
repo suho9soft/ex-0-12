@@ -27,7 +27,7 @@ Hreg(40001~40009) → 출력 상태 및 타이머 피드백
 
 특징: WiFi 내장, Arduino IDE 기반 펌웨어 작성
 
-3️⃣ Raspberry Pi Pico W (Modbus TCP 서버)
+3️⃣ Raspberry Pi Pico 2 W (Modbus TCP 서버)
 IP 주소 (예시): 172.30.1.53
 
 Port: 502
@@ -45,7 +45,7 @@ Coil/Hreg 매핑 구조 ESP32와 동일
 
 ESP32 접속 시: IP 172.30.1.52, Port 502
 
-Pico W 접속 시: IP 172.30.1.53, Port 502
+Pico 2 W 접속 시: IP 172.30.1.53, Port 502
 
 화면 구성
 
@@ -58,7 +58,7 @@ Pico W 접속 시: IP 172.30.1.53, Port 502
 
 기능
 
-ESP32/Pico W 상태 → 대시보드 표시
+ESP32/Pico 2 W 상태 → 대시보드 표시
 
 HMI 입력 → 다른 장치 제어
 
