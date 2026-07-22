@@ -94,6 +94,7 @@ Node-RED 실행 → 대시보드 및 MQTT 연동
 IoT MQTT Panel / Home Assistant → 모바일 및 스마트홈 확장
 
 주인백
+
 처음엔 Codesys, 가입부터가 벽이더라. 싸이트 들어가서 회원 등록하고, 다운로드 받고, 라이선스 티켓까지 넣어야 비로소 “정상 작동”이라는 말이 나온다. 여기까지 오면 벌써 숨이 찬다.
 
 PLC? 그거 비싸다. 그래서 나는 Raspberry Pi5를 집어 들었다. 저렴하면서도 힘이 있다. Codesys Raspberry Pi SL 붙이고, 티켓 넣고, 이제야 길이 열린다.
