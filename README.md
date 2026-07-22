@@ -105,7 +105,60 @@ IoT MQTT Panel → 간단한 모바일 MQTT 제어
 
 Home Assistant → 스마트 홈 통합 제어
 
-👉 정리하면, 이 프로젝트는 현장(HMI) 제어 ↔ 모바일 제어 ↔ 스마트 홈 확장까지 단계적으로 확장 가능한 IoT 제어 시스템입니다.
-그리고요 위쪽에 2개의 프로젝트 있는데요 한나은 wifi 고정이 않된거고요 그리고 node-red 프로그램
-있데요 여기서 스마트폰 aws 알렉사 google 어시스턴트 Home 또 IoT MQTT Panel 은 MQTT X 무료죠 서버을 여기서 잡고 가는게 좋지 않을 까요
-받다 주고 받다 역활 분담을 잘 하시고요 최대한 프로젝트을 할때 방심 하지 말고 성공 하시길 발랍니다 화이팅!
+👉 📌 프로젝트 개요
+이 프로젝트는 ESP32/RP2040 기반 Modbus TCP 서버를 구현하여,
+
+Coil(00001~00008) → 출력 제어 (GPIO2~GPIO9)
+
+Holding Register(40001~40009) → 출력 상태 및 타이머 피드백
+
+을 제공하고, WEINTEK HMI와 연동하여 버튼/램프를 통해 제어 및 모니터링할 수 있도록 구성한 예시입니다.
+
+⚙️ 주요 기능
+WiFi 연결: 고정 IP 설정 및 자동 재연결 로직 포함
+
+Modbus TCP 서버: Coil/Hreg 등록 및 CODESYS/HMI와 호환
+
+출력 제어: Coil → GPIO 매핑 (OUT1~OUT8)
+
+상태 피드백: Hreg → GPIO 상태 반영 (램프 표시)
+
+타이머 기능: Coil6 트리거 시 OUT7을 1분간 ON 후 자동 OFF
+
+Watchdog (선택적): 일정 시간 Modbus 요청이 없으면 전체 출력 OFF
+
+🖥️ HMI 구성 예시
+버튼 (출력 제어)
+버튼1 → Coil 00001 → OUT1(GPIO2)
+
+버튼2 → Coil 00002 → OUT2(GPIO3)
+
+…
+
+버튼8 → Coil 00008 → OUT8(GPIO9)
+
+램프 (상태 피드백)
+램프1 → Hreg 40001 → OUT1 상태
+
+램프2 → Hreg 40002 → OUT2 상태
+
+…
+
+램프8 → Hreg 40009 → OUT8 상태
+
+👉 버튼으로 Coil을 제어하면, 램프에서 실제 출력 상태를 확인할 수 있습니다.
+
+🚀 사용 방법
+Arduino IDE에서 ESP32/RP2040 보드 선택
+
+WiFi.h, ModbusTCP.h 라이브러리 설치
+
+소스 코드 업로드 후 ESP32 전원 연결
+
+WEINTEK HMI 또는 CODESYS에서 Modbus TCP 장치 추가
+
+IP: 172.30.1.52
+
+Port: 502
+
+Coil/Hreg 주소 매핑
