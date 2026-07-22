@@ -21,11 +21,11 @@ Port: 502
 
 기능
 
-  디바이스 MODBUS TCP/IP 주소 4x 1
+  디바이스 MODBUS TCP/IP 주소 4x 1 //(네모# 버튼)
   
-  디바이스 MODBUS TCP/IP 주소0x 00001 속성 토글
+  디바이스 MODBUS TCP/IP 주소0x 00001 속성 토글 //(사각 버튼)
 
-  디바이스 MODBUS TCP/IP 주소0x 00001
+  디바이스 MODBUS TCP/IP 주소0x 00001 //(원 버튼)
 
   디바이스 MODBUS TCP/IP_1 주소 4x 1
   
