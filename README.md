@@ -99,7 +99,7 @@ Weintek HMI에서 Modbus TCP 장치 추가
 
 ESP32 → IP 172.30.1.52, Port 502
 
-Pico W → IP 172.30.1.53, Port 502
+Pico 2W → IP 172.30.1.53, Port 502
 
 Node-RED 실행 → 대시보드 및 MQTT 연동
 
